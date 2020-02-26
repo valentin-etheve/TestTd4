@@ -2,7 +2,7 @@ public class Q1 {
 
     public static int[] calculCarre(int a, int b){
 
-        int[] tab = new int[50];
+        int[] tab = new int[b-a+1];
         int i = 0;
 
         for (int x =a ; x<=b ; x++){

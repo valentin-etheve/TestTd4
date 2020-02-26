@@ -4,13 +4,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class Q1Test {
+class PalindromeTest {
 
-    protected Q1 q;
+    protected Palindrome pal;
 
     @BeforeEach
     void setUp() {
-        q = new Q1();
+        pal = new Palindrome();
     }
 
     @AfterEach
@@ -18,6 +18,18 @@ class Q1Test {
     }
 
     @Test
-    void calculCarre() {
+    void isPalindrome() {
+
+        String t = "suus" ;
+
+        assertEquals(true, pal.isPalindrome(t));
+
+    }
+
+    @Test
+    void splitPalindromeIntoWords() {
+
+        String t = ""
+
     }
 }
