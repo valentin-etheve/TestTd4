@@ -6,8 +6,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class Q1Test {
 
+    protected Q1 q;
+
     @BeforeEach
     void setUp() {
+        q = new Q1();
     }
 
     @AfterEach
