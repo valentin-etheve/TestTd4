@@ -24,6 +24,8 @@ class PalindromeTest {
 
         assertEquals(true, pal.isPalindrome(t));
 
+
+
     }
 
     @Test
@@ -32,6 +34,11 @@ class PalindromeTest {
         String t = "je suis 4 mots" ;
 
         assertArrayEquals(new String[] {"je", "suis", "4", "mots"} , pal.splitPalindromeIntoWords(t));
+
+
+            String t2 = "je suis : 4 mots";
+
+            assertArrayEquals(new String[]{"je", "suis", "4", "mots"}, pal.splitPalindromeIntoWords(t2));
 
     }
 }
