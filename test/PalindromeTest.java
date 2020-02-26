@@ -29,7 +29,9 @@ class PalindromeTest {
     @Test
     void splitPalindromeIntoWords() {
 
-        String t = ""
+        String t = "je suis 4 mots" ;
+
+        assertArrayEquals(new String[] {"je", "suis", "4", "mots"} , pal.splitPalindromeIntoWords(t));
 
     }
 }
