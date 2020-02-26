@@ -7,7 +7,7 @@ public class Q1 {
 
         for (int x =a ; x<=b ; x++){
 
-            tab[i] = (int) Math.sqrt(x) ;
+            tab[i] = (int)Math.round(Math.sqrt(x)) ;
             i++;
 
         }
@@ -17,7 +17,7 @@ public class Q1 {
 
 public static void main(String[] args){
 
-    int[] t = Q1.calculCarre(2,5);
+    int[] t = Q1.calculCarre(1,5);
 
     for(int x : t){
         System.out.println(x);
