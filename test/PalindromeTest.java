@@ -24,6 +24,9 @@ class PalindromeTest {
 
         assertEquals(true, pal.isPalindrome(t));
 
+        // test avec majuscule
+        String t1 = "Suus";
+        assertEquals(true, pal.isPalindrome((t1)));
 
 
     }
@@ -36,9 +39,18 @@ class PalindromeTest {
         assertArrayEquals(new String[] {"je", "suis", "4", "mots"} , pal.splitPalindromeIntoWords(t));
 
 
-            String t2 = "je suis : 4 mots";
+        String t2 = "je suis : 4 mots";
 
-            assertArrayEquals(new String[]{"je", "suis", "4", "mots"}, pal.splitPalindromeIntoWords(t2));
+        assertArrayEquals(new String[]{"je", "suis", ":", "4", "mots"}, pal.splitPalindromeIntoWords(t2));
 
+
+
+    }
+
+    @Test
+    void nbPalindrome(){
+        String s = "je suus un palindrome, de la street";
+
+        assertEquals(1, pal.nbPalindrome(s));
     }
 }

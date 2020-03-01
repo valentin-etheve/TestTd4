@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Palindrome {
     private static Scanner scanner = new Scanner(System.in);
 
-    public static void main (String[] args) {
+    /*public static void main (String[] args) {
         int total=0;
 
 
@@ -13,12 +13,19 @@ public class Palindrome {
 
         String[] arrayPalindrome = splitPalindromeIntoWords(palindrome);
 
-        for (String word : arrayPalindrome) { if (isPalindrome(word)) total++; }
+        for (String word : arrayPalindrome) {
+            if(word != "." || word != ":" || word != ";" || word != "!" || word != "?"){
+                if (isPalindrome(word)) {
+                    total++;
+                }
+            }
+        }
 
         System.out.println(total);
-    }
+    }*/
 
     public static boolean isPalindrome(String palindrome) {
+        palindrome = palindrome.toLowerCase();
         String palindromeInverse = "";
         int i=palindrome.length()-1;
 
@@ -30,13 +37,23 @@ public class Palindrome {
     public static String[] splitPalindromeIntoWords(String palindrome) {
         String aa = palindrome;
 
-        aa=aa.replace(".", " ");
-        aa=aa.replace(",", " ");
-        aa=aa.replace(";", " ");
-        aa=aa.replace(":", " ");
-        aa=aa.replace("!", " ");
-        aa=aa.replace("?", " ");
-
         return aa.split(" ");
+    }
+
+
+    public static int nbPalindrome(String pal){
+
+        int total=0;
+        String[] arrayPalindrome = splitPalindromeIntoWords(pal);
+
+        for (String word : arrayPalindrome) {
+            if(word != "." || word != ":" || word != ";" || word != "!" || word != "?" || word != "," || word != " "){
+                if (isPalindrome(word)) {
+                    total++;
+                }
+            }
+        }
+        return total;
+
     }
 }
