@@ -20,6 +20,33 @@ public class Triangle {
 
         String t ="pas un triangle";
 
+        double max =0;
+        double c1 =0;
+        double c2 = 0;
+
+        if(a<b){
+            max = b;
+            c1 = a;
+        }else {
+            max =a;
+            c1=b;
+        }
+
+        if(max<c){
+            c2 = max;
+            max = c;
+        }else {
+            c2 = c;
+        }
+
+        if(max < c1+c2){
+            t="Scalene";
+        }
+
+        if(max*max == (c1*c1 + c2*c2)){
+            t= "Rectangle";
+        }
+
         if (a==b && b==c && c==a) {
             t = "Equilateral";
         }
@@ -38,28 +65,8 @@ public class Triangle {
             }
         }
 
-        double max =0;
-         double c1 =0;
-         double c2 = 0;
 
-        if(a<b){
-            max = b;
-            c1 = a;
-        }else {
-            max =a;
-            c1=b;
-        }
 
-        if(max<c){
-            c2 = max;
-            max = c;
-        }else {
-            c2 = c;
-        }
-
-        if(max*max == (c1*c1 + c2*c2)){
-            t= "Rectangle";
-        }
         return t;
 
 

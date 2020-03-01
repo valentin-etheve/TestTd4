@@ -27,5 +27,7 @@ class TriangleTest {
 
         assertEquals("Rectangle", t.TypeTriangle(8,6,10));
 
+        assertEquals("Scalene", t.TypeTriangle(10,6,7));
+
     }
 }
