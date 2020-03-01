@@ -20,5 +20,7 @@ class Q1Test {
     void calculCarre() {
         assertArrayEquals(new int[]{1, 1, 2, 2, 2}, q.calculCarre(1, 5));
         // assert exception if number is negative or a > b
+        assertArrayEquals(new int[]{}, q.calculCarre(-1, 5));
+        assertArrayEquals(new int[]{1, 1, 2, 2, 2}, q.calculCarre(5, 1));
     }
 }
