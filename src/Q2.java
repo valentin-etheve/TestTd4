@@ -33,11 +33,9 @@ public class Q2 {
 
         int[][] tab = Q2.matrice(3,4,10,30);
 
-
-        for (int[] x : tab){
-            for(int y : x){
-                System.out.println(y);
-            }
+        int j =0;
+        for (int i = 0; i<3;i++){
+            System.out.println(tab[i][0] + " "+ tab[i][1] + " "+ tab[i][2] + " "+ tab[i][3] );
         }
 
     }
