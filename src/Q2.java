@@ -38,9 +38,9 @@ public class Q2 {
         int[][] tab = Q2.matrice(M,N,A,B);
 
         if (tab.length==0) System.out.println("Erreur, pas de valeur négative");
-        for (int i = 0; i<tab.length;i++)
-            for (int j=0;i<tab[0].length;i++) System.out.println(tab[i][j] + " "+ tab[i][j] + " "+ tab[i][j] + " "+ tab[i][j] );
-
-
+        for (int i = 0; i<tab.length;i++) {
+            System.out.println("");
+            for (int j = 0; j < tab[0].length; j++) System.out.print(tab[i][j]+"\t");
+        }
     }
 }
